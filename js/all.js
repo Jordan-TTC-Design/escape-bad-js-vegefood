@@ -1,6 +1,7 @@
 // TODO: 修正 ESLint 錯誤、補上分號、前輩說要改單引號 QQ
+
 const url = 'https://hexschool.github.io/js-filter-data/data.json';
-const axios = import('axios');
+
 const table = document.querySelector('.table-content');
 const filter = document.querySelector('.filter');
 
@@ -8,7 +9,7 @@ let data;
 let showData = [];
 let category = '';
 
-axios.get(url).then((res) => {
+this.axios.get(url).then((res) => {
   data = res.data.filter((a) => a.作物名稱);
   // TODO: 之後拆成 renderData 函式
   let str = '';
